@@ -1,3 +1,6 @@
+## tailwind
+```https://tailwindcss.com/docs/installation```
+
 ## primereact
 ```https://primereact.org/```
 
