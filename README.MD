@@ -15,4 +15,6 @@
 
 ```code .```
 
-#
+# Modelo já pronto
+
+```npx create-next-app@latest .```
