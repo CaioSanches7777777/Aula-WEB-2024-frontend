@@ -25,6 +25,7 @@
 
 ```npx create-next-app@latest .```
 
+# intellisense do tailwind
 
 # 
 
