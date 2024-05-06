@@ -31,6 +31,13 @@
 
 ```https://www.svgrepo.com/```
 
+# incluir tabs
+```https://www.w3schools.com/howto/howto_js_vertical_tabs.asp```
+
+# 
+
+``````
+
 ``````
 
 # 
