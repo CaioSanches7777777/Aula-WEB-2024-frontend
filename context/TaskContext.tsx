@@ -15,7 +15,7 @@ export const TaskContextProvider = ({ children }: Readonly<{children: React.Reac
     const [tasks, setTasks] = useState<string[]>([]);
 
     const addTask = (description: string) => {
-        setTasks([...tasks, description])
+        if(description != '') setTasks([...tasks, description])
     };
 
     const removeTask = (taskIndex: number) => {

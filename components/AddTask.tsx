@@ -1,4 +1,5 @@
 'use client' //para rodar como se fosse do lado do cliente
+
 //'use server' //para rodar como se fosse do lado do servidor
 
 import React, { useContext, useState } from "react";
@@ -22,7 +23,6 @@ const AddTask = ({}) => {
             <form onSubmit={saveTask}>
 
                 <input type="text" placeholder="Descreva a tarefa" className="border border-gray-500 px-4 py-2 rounded-lg" name="description" value={description} onChange={(e) => setDescription(e.target.value)}>
-
                 </input>
 
                 <br />
