@@ -1,8 +1,8 @@
 'use client' //para rodar como se fosse do lado do cliente
-import { TaskContext } from "@/context/TaskContext";
 //'use server' //para rodar como se fosse do lado do servidor
 
 import React, { useContext, useState } from "react";
+import { TaskContext } from "@/context/TaskContext";
 
 const AddTask = ({}) => {
     
@@ -12,6 +12,7 @@ const AddTask = ({}) => {
     const saveTask = (e: {preventDefault: () => void}) => {
         e.preventDefault();
         console.log('Lista antes de incluir: ' + tasks);
+        setDescription('');
         addTask(description);
     }
 
