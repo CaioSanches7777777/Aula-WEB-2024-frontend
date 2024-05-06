@@ -5,7 +5,7 @@ import React, {createContext, useState} from "react";
 
 type TaskContextType = {
     tasks: string[];
-    addTask: (description:string) => void;
+    addTask: (neme:string ,description:string) => void;
     removeTask: (taskIndex:number) => void;
 }
 
@@ -14,8 +14,8 @@ export const TaskContext = createContext({} as TaskContextType);
 export const TaskContextProvider = ({ children }: Readonly<{children: React.ReactNode;}>) => {
     const [tasks, setTasks] = useState<string[]>([]);
 
-    const addTask = (description: string) => {
-        if(description != '') setTasks([...tasks, description])
+    const addTask = (taskName:string ,description: string) => {
+        if(taskName!= '' && description != '') setTasks([...tasks, taskName])
     };
 
     const removeTask = (taskIndex: number) => {
