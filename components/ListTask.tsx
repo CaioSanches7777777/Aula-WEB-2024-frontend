@@ -1,18 +1,43 @@
 "use client";
 
-import React, {useContext} from "react";
-import { TaskContext } from "@/context/TaskContext";
+import React, {useContext, useState} from "react";
+import { TaskContext, Task, Stage } from "@/context/TaskContext";
+import Select from "react-dropdown-select";
 
 const ListTask = ({}) => {
 
+    const [selected, setSelected] = useState<Stage>(Stage.Backlog);
     const { tasks, removeTask } = useContext(TaskContext);
+
+    let selectOptions = [
+        {
+            value:0,
+            stage:"Backlog"
+        },
+        {
+            value:1,
+            stage:"ToDo"
+        },
+        {
+            value:2,
+            stage:"Doing"
+        },
+        {
+            value:3,
+            stage:"Done"
+        }
+    ];
+
+    const hangleChangeSelect = (values:any) =>{
+        setSelected(values.value);
+    }
 
     return (
         <div className="flex flex-col  gap-4 sm:items-center sm:justify-between mb-8 sm:mb-8">
             <h2 className="text-2xl font-semibold">Minhas tarefas</h2>
 
             <ul className="max-w-md space-y-1 text-gray-500 list-inside">
-                {tasks.map((task:string, index:number) => (
+                {tasks.map((task:Task, index:number) => (
                     
                     <li key={index} className="flex flex-center gap-2 mb-2 text-center">
                         
@@ -24,7 +49,14 @@ const ListTask = ({}) => {
                             </svg>
                         </button>
 
-                        {task}
+                        {task.taskName} 
+                        <Select 
+                            values={[]}
+                            options={selectOptions} 
+                            labelField="stage" 
+                            valueField="value" 
+                            onChange={(values: any) => hangleChangeSelect(values)}
+                        />
 
                         <button onClick={() => removeTask(index)}>
                             <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,10 +80,10 @@ return (
             <h2 className="text-2xl font-semibold">Minhas tarefas</h2>
 
             <ul className="max-w-md space-y-1 text-gray-500 list-inside">
-                {tasks.map((task:string, index:number) => (
+                {tasks.map((task:Task, index:number) => (
 
                     <li key={index} className="flex flex-center gap-2 mb-2 text-center">
-                        {task}
+                        {task.description}
                         
                         <button onClick={() => removeTask(index)}>
                             <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
