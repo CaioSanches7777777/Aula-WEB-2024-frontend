@@ -34,9 +34,9 @@
 # incluir tabs
 ```https://www.w3schools.com/howto/howto_js_vertical_tabs.asp```
 
-# 
+# instalar dropdown select
 
-``````
+```npm install --save react-dropdown-select```
 
 ``````
 
