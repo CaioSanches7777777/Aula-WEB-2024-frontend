@@ -43,6 +43,12 @@ export const TaskContextProvider = ({ children }: Readonly<{children: React.Reac
         setTasks(tasks.filter((_:Task, index:number) => taskIndex !== index)); //filtra o array de tarefas pelo index das tarefas, ignorando o valor do conteúdo
     };
 
+    /*
+    const describeTask = (taskIndex: number) => {
+
+    }
+    */
+
     const changeStage = (taskIndex:number, new_stage:Stage) => {
         tasks[taskIndex].stage = new_stage;
     }
