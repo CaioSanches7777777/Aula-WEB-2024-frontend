@@ -40,8 +40,8 @@
 
 ``````
 
-# 
+# instalar o Hook form
 
-``````
+```npm install react-hook-form```
 
 ``````
