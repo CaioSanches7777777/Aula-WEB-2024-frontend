@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import React, {useContext, useState} from "react";
 import { TaskContext, Task, Stage } from "@/context/TaskContext";
@@ -6,7 +6,6 @@ import Select from "react-dropdown-select";
 
 const ListTask = ({}) => {
 
-    //const { describeTask } = 
     const [selected, setSelected] = useState<Stage>(Stage.Backlog);
     const { tasks, removeTask, changeStage } = useContext(TaskContext);
     const options = (Object.keys(Stage)
@@ -82,7 +81,7 @@ const ListTask = ({}) => {
                             </button>
                         </div>
                         
-                        <div style={{display: 'none'}}>
+                        <div className="desc" style={{display: 'none'}}>
                             {task.description}
                         </div>
                         

@@ -1,5 +1,5 @@
 //ela que faz a gestão (incluir e remover itens) da lista de tarefas
-"use client";
+'use client'
 
 import React, {createContext, useState} from "react";
 
