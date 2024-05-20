@@ -45,3 +45,9 @@
 ```npm install react-hook-form```
 
 ``````
+
+# instalar o nookies
+
+```npm install nookies```
+
+``````
