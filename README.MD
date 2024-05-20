@@ -1,3 +1,7 @@
+## CORS
+
+```https://medium.com/@baphemot/understanding-cors-18ad6b478e2b```
+
 ## tailwind
 ```https://tailwindcss.com/docs/installation```
 
