@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { AuthContext, SignIdData } from "@/context/AuthContext";
 import { useContext } from "react";
@@ -8,24 +8,24 @@ const Login = async ({}) => {
     const {register, handleSubmit} = useForm<SignIdData>();
     const { login, authError } = useContext(AuthContext);
 
-    const handleLogin = async(data: SignIdData) => {
+    const handleLogin = async (data : SignIdData) => {
         await login(data);
     }
 
     return (
         <div className="grid place-items-center">
             <form className="flex flex-col" onSubmit={handleSubmit(handleLogin)}>
-                <label htmlFor="username">Usuário</label>
+                <label htmlFor="username">Usuário: </label>
                 <input {...register('username')} type="text" name="username" id="username" placeholder="username"></input>
 
-                <label htmlFor="password">Senha</label>
+                <label htmlFor="password">Senha: </label>
                 <input {...register('password')} type="text" name="password" id="password" placeholder="password"></input>
 
                 <input type="submit" value="Acessar" />
             </form>
-            <p>{authError}</p>
+            {authError && <p>{authError}</p>}
         </div>
-    )
+    );
 }
 
 export default Login;

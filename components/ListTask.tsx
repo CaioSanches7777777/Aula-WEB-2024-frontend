@@ -43,8 +43,12 @@ const ListTask = ({}) => {
             <h2 className="text-2xl font-semibold">Minhas tarefas</h2>
 
             <div className="flex gap-2 text-gray-600">
-                {options.map((option, index) => (
-                    <button key={index} className={selectedTab === option.value ? 'active-tab' : ''} onClick={() => setSelectedTab(option.value)}>
+            {options.map((option, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setSelectedTab(option.value)}
+                        className={selectedTab === option.value ? 'active-tab' : ''}
+                    >
                         {option.label}
                     </button>
                 ))}
@@ -53,7 +57,7 @@ const ListTask = ({}) => {
             <ul className="max-w-md space-y-1 text-gray-500 list-inside">
                 {tasks.map((task:Task, index:number) => (
                     
-                    <li key={index} className="flex flex-center gap-2 mb-2 text-center">
+                    <li className={`flex flex-center gap-2 mb-2 ${task.stage !== selectedTab ? 'hidden':''}`} key={index}>
                         
                         <div className="flex flex-center gap-2 mb-2 text-center" >
                             <button >
@@ -81,9 +85,7 @@ const ListTask = ({}) => {
                             </button>
                         </div>
                         
-                        <div className="desc" style={{display: 'none'}}>
-                            {task.description}
-                        </div>
+                        
                         
                     </li>
 

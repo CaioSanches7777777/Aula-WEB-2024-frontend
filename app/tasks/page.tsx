@@ -1,4 +1,5 @@
 import AddTask from "@/components/AddTask";
+import DescribeTask from "@/components/DescribeTask";
 import ListTask from "@/components/ListTask";
 import TaskList from "@/components/ListTask";
 import { TaskContextProvider } from "@/context/TaskContext";
@@ -11,6 +12,7 @@ const Tasks = ({}) => {
             <div className="grid place-items-center">
                 <TaskContextProvider>
                     <ListTask />
+                    <DescribeTask />
                     <AddTask />
                 </TaskContextProvider>
             </div>
