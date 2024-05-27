@@ -13,7 +13,7 @@ const Login = async ({}) => {
     }
 
     return (
-        <div className="grid place-items-center">
+        <div className="grid place-items-center mt-20 ">
             <form className="flex flex-col" onSubmit={handleSubmit(handleLogin)}>
                 <label htmlFor="username">Usuário: </label>
                 <input {...register('username')} type="text" name="username" id="username" placeholder="username"></input>
