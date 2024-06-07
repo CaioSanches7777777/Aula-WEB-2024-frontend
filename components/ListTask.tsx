@@ -3,6 +3,7 @@
 import React, {useContext, useState} from "react";
 import { TaskContext, Task, Stage } from "@/context/TaskContext";
 import Select from "react-dropdown-select";
+import DescribeTask from "./DescribeTask";
 
 const ListTask = ({}) => {
 
@@ -54,6 +55,7 @@ const ListTask = ({}) => {
                 ))}
             </div>
 
+            <div className="flex">
             <ul className="max-w-md space-y-1 text-gray-500 list-inside">
                 {tasks.map((task:Task, index:number) => (
                     
@@ -91,6 +93,8 @@ const ListTask = ({}) => {
 
                 ))}
             </ul>
+            <DescribeTask/>
+            </div>
 
         </div>
     );

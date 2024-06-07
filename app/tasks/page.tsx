@@ -11,8 +11,9 @@ const Tasks = ({}) => {
 
             <div className="grid place-items-center">
                 <TaskContextProvider>
+                    <div className="w-screen">
                     <ListTask />
-                    <DescribeTask />
+                    </div>
                     <AddTask />
                 </TaskContextProvider>
             </div>
